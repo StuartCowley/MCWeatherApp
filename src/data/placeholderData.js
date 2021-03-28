@@ -76,3 +76,5 @@ const placeholderData = {
     },
   ],
 };
+
+export default placeholderData;
