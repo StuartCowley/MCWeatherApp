@@ -4,7 +4,7 @@ import "../styles/App.css";
 
 function DetailedSummary() {
   return (
-    <div>
+    <div className="detailed-summary">
       <h1>Detailed summary</h1>
     </div>
   );

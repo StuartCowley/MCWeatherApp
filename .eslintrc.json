@@ -29,13 +29,6 @@
       {
         "extensions": [".js", ".jsx"]
       }
-    ],
-    "react/forbid-prop-types": [1,
-      {
-        "forbid": ["any", "object"],
-        "checkContextTypes": true,
-        "checkChildContextTypes": true
-      }
     ]
   }
 }

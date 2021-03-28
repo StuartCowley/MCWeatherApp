@@ -5,17 +5,17 @@ import ForecastSummary from "./ForecastSummary";
 
 function ForecastSummaries({ forecasts }) {
   return (
-    <div>
+    <div className="forecast-summaries">
       <h1>Forecast summaries</h1>
-      {forecasts.forEach((forecast) => {
-        <ForecastSummary forecastData={forecast} />;
+      {forecasts.map((forecast) => {
+        return <ForecastSummary {...forecast} />;
       })}
     </div>
   );
 }
 
 ForecastSummaries.propTypes = {
-  forecasts: PropTypes.array,
+  forecasts: PropTypes.arrayOf(PropTypes.object),
 };
 
 ForecastSummaries.defaultProps = {
