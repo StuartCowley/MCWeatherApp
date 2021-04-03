@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../styles/App.css";
 
-function ForecastSummary({ date, icon, temperature, description }) {
+const ForecastSummary = (props) => {
+  const { date, icon, temperature, description } = props;
+  const { maxTemp } = temperature;
   // Create date in format `shortWeekDay numericDay shortMonth` for local language (hard coded to GB for now)
   const locale = "en-GB";
   const options = {
@@ -21,24 +22,21 @@ function ForecastSummary({ date, icon, temperature, description }) {
       <h2>Forecast summary</h2>
       <div>{formattedDate}</div>
       <div>{icon}</div>
-      <div>{`${temperature.max}\u2103`}</div>
+      <div>{`${maxTemp}\u2103`}</div>
       <div>{description}</div>
     </div>
   );
-}
+};
 
 ForecastSummary.propTypes = {
-  date: PropTypes.number,
-  icon: PropTypes.number,
+  date: PropTypes.number.isRequired,
+  icon: PropTypes.number.isRequired,
   temperature: PropTypes.objectOf(PropTypes.string),
-  description: PropTypes.string,
+  description: PropTypes.string.isRequired,
 };
 
 ForecastSummary.defaultProps = {
-  date: 0,
-  icon: 0,
   temperature: 0,
-  description: "",
 };
 
 export default ForecastSummary;

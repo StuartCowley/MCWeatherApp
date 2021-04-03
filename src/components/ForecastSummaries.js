@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../styles/App.css";
 import ForecastSummary from "./ForecastSummary";
 
-function ForecastSummaries({ forecasts }) {
+const ForecastSummaries = ({ forecasts }) => {
   return (
     <div className="forecast-summaries">
       <h1>Forecast summaries</h1>
@@ -12,7 +11,7 @@ function ForecastSummaries({ forecasts }) {
       })}
     </div>
   );
-}
+};
 
 ForecastSummaries.propTypes = {
   forecasts: PropTypes.arrayOf(PropTypes.object),
