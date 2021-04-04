@@ -13,6 +13,7 @@ const ForecastSummaries = ({ forecasts }) => {
             description={forecast.description}
             icon={forecast.icon}
             maxTemp={forecast.temperature.max}
+            key={forecast.date}
           />
         );
       })}

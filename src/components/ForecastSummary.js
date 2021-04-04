@@ -28,7 +28,7 @@ const ForecastSummary = ({ date, description, icon, maxTemp }) => {
 
 ForecastSummary.propTypes = {
   date: PropTypes.number.isRequired,
-  icon: PropTypes.number.isRequired,
+  icon: PropTypes.string.isRequired,
   maxTemp: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
 };
