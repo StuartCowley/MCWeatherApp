@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 
 const LocationDetails = ({ city, country }) => {
   return (
-    <h1 className="location-details">
-      Forecast for {city}, {country}
-    </h1>
+    <h1 className="location-details">{`Forecast for ${city}, ${country}`}</h1>
   );
 };
 
