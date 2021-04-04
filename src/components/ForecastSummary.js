@@ -17,11 +17,13 @@ const ForecastSummary = ({ date, description, icon, maxTemp }) => {
 
   return (
     <div className="forecast-summary">
-      <h2>Forecast summary</h2>
-      <div>{formattedDate}</div>
-      <div>{icon}</div>
-      <div>{`${maxTemp}\u2103`}</div>
-      <div>{description}</div>
+      <h2 className="forecast-summary__title">Forecast summary</h2>
+      <div className="forecast-summary__date">{formattedDate}</div>
+      <div className="forecast-summary__icon" data-testid="forecast-icon">
+        {icon}
+      </div>
+      <div className="forecast-summary__max-temp">{`${maxTemp}\u2103`}</div>
+      <div className="forecast-summary__description">{description}</div>
     </div>
   );
 };
