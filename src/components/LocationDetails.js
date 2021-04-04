@@ -1,14 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const LocationDetails = (props) => {
-  const { city, country } = props;
+const LocationDetails = ({ city, country }) => {
   return (
-    <div className="location-banner">
-      <h1>
-        Forecast for {city}, {country}
-      </h1>
-    </div>
+    <h1 className="location-details">
+      Forecast for {city}, {country}
+    </h1>
   );
 };
 

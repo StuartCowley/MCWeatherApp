@@ -7,7 +7,14 @@ const ForecastSummaries = ({ forecasts }) => {
     <div className="forecast-summaries">
       <h1>Forecast summaries</h1>
       {forecasts.map((forecast) => {
-        return <ForecastSummary {...forecast} />;
+        return (
+          <ForecastSummary
+            date={forecast.date}
+            description={forecast.description}
+            icon={forecast.icon}
+            maxTemp={forecast.temperature.max}
+          />
+        );
       })}
     </div>
   );

@@ -2,11 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 
 const DetailedSummary = () => {
-  return (
-    <div className="detailed-summary">
-      <h1>Detailed summary</h1>
-    </div>
-  );
+  return <h1 className="detailed-summary">Detailed summary</h1>;
 };
 
 export default DetailedSummary;

@@ -5,12 +5,11 @@ import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import DetailedSummary from "./DetailedSummary";
 
-const App = (props) => {
-  const { location } = props;
-  const { forecasts } = props;
+const App = ({ location, forecasts }) => {
+  const { city, country } = location;
   return (
     <div className="App">
-      <LocationDetails city={location.city} country={location.country} />
+      <LocationDetails city={city} country={country} />
       <ForecastSummaries forecasts={forecasts} />
       <DetailedSummary />
     </div>
