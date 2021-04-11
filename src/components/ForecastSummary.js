@@ -16,7 +16,7 @@ const ForecastSummary = ({ date, description, icon, maxTemp }) => {
   formattedDate += ` ${new Date(date).toLocaleDateString(locale, options)}`;
 
   return (
-    <div className="forecast-summary">
+    <div className="forecast-summary" data-testid="forecast-summary">
       <h2 className="forecast-summary__title">Forecast summary</h2>
       <div className="forecast-summary__date">{formattedDate}</div>
       <div className="forecast-summary__icon" data-testid="forecast-icon">

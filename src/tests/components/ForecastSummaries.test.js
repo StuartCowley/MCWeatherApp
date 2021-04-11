@@ -13,6 +13,15 @@ describe("ForecastDetails", () => {
         min: 10,
       },
     },
+    {
+      date: 1525046454300,
+      description: "Cloudy",
+      icon: "400",
+      temperature: {
+        max: 22,
+        min: 15,
+      },
+    },
   ];
 
   it("renders correctly", () => {
