@@ -5,10 +5,12 @@ import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import DetailedSummary from "./DetailedSummary";
 
+import "../styles/App.css";
+
 const App = ({ location, forecasts }) => {
   const { city, country } = location;
   return (
-    <div className="App">
+    <div className="weather-app">
       <LocationDetails city={city} country={country} />
       <ForecastSummaries forecasts={forecasts} />
       <DetailedSummary />
