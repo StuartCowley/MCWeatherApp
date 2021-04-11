@@ -23,7 +23,7 @@ App.propTypes = {
   }).isRequired,
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
-      date: PropTypes.number.isRequired,
+      date: PropTypes.number,
       description: PropTypes.string,
       icon: PropTypes.string,
       temperature: PropTypes.shape({
