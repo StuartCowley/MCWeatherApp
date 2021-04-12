@@ -5,6 +5,6 @@ import { location, forecasts } from "../data/placeholderData.json";
 
 test("renders weather app heading", () => {
   render(<App location={location} forecasts={forecasts} />);
-  const linkElement = screen.getByText(/forecast summaries/i);
+  const linkElement = screen.getByText(/Forecast for manchester/i);
   expect(linkElement).toBeInTheDocument();
 });
