@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastSummary";
 
+import "../styles/ForecastSummaries.css";
+
 const ForecastSummaries = ({ forecasts }) => {
   return (
     <div className="forecast-summaries">
-      <h1>Forecast summaries</h1>
       {forecasts.map((forecast) => {
         return (
           <ForecastSummary

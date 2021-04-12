@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import WeatherIcon from "react-icons-weather";
 
 const ForecastSummary = ({ date, description, icon, maxTemp }) => {
   // Create date in format `shortWeekDay numericDay shortMonth` for local language (hard coded to GB for now)
@@ -17,11 +18,15 @@ const ForecastSummary = ({ date, description, icon, maxTemp }) => {
 
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
-      <h2 className="forecast-summary__title">Forecast summary</h2>
       <div className="forecast-summary__date">{formattedDate}</div>
-      <div className="forecast-summary__icon" data-testid="forecast-icon">
-        {icon}
-      </div>
+      <WeatherIcon
+        data-testid="forecast-icon"
+        className="forecast-summary__icon"
+        name="owm"
+        iconId={icon}
+        flip="horizontal"
+        rotate="90"
+      />
       <div className="forecast-summary__max-temp">{`${maxTemp}\u2103`}</div>
       <div className="forecast-summary__description">{description}</div>
     </div>
@@ -30,9 +35,9 @@ const ForecastSummary = ({ date, description, icon, maxTemp }) => {
 
 ForecastSummary.propTypes = {
   date: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   maxTemp: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
 };
 
 export default ForecastSummary;

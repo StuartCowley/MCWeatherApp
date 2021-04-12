@@ -13,7 +13,7 @@ const App = ({ location, forecasts }) => {
     <div className="weather-app">
       <LocationDetails city={city} country={country} />
       <ForecastSummaries forecasts={forecasts} />
-      <DetailedSummary />
+      <DetailedSummary forecast={forecasts[0]} />
     </div>
   );
 };
