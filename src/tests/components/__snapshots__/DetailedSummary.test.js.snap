@@ -17,11 +17,6 @@ exports[`DetailedSummary renders correctly 1`] = `
       name="owm"
     />
     <div
-      class="detailed-summary__max-temp"
-    >
-      15℃
-    </div>
-    <div
       class="detailed-summary__description"
     >
       Cloudy
@@ -30,6 +25,11 @@ exports[`DetailedSummary renders correctly 1`] = `
       class="detailed-summary__humidity"
     >
       22
+    </div>
+    <div
+      class="detailed-summary__min-temp"
+    >
+      10℃
     </div>
     <div
       class="detailed-summary__wind-speed"

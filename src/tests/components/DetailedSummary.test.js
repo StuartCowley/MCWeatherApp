@@ -29,7 +29,7 @@ describe("DetailedSummary", () => {
     expect(getByTestId("forecast-icon")).toHaveClass("detailed-summary__icon");
     expect(getByText(22)).toHaveClass("detailed-summary__humidity");
     expect(getByText("Mon 30 Apr")).toHaveClass("detailed-summary__date");
-    expect(getByText(`15\u2103`)).toHaveClass("detailed-summary__max-temp");
+    expect(getByText(`10\u2103`)).toHaveClass("detailed-summary__min-temp");
     expect(getByText(13)).toHaveClass("detailed-summary__wind-speed");
     expect(getByText("s")).toHaveClass("detailed-summary__wind-direction");
   });

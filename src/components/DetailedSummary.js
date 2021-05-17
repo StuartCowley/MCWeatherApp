@@ -33,7 +33,7 @@ const DetailedSummary = ({ forecast }) => {
       />
       <div className="detailed-summary__description">{description}</div>
       <div className="detailed-summary__humidity">{humidity}</div>
-      <div className="detailed-summary__min-temp">{temperature.min}</div>
+      <div className="detailed-summary__min-temp">{`${temperature.min}\u2103`}</div>
       <div className="detailed-summary__wind-speed">{wind.speed}</div>
       <div className="detailed-summary__wind-direction">{wind.direction}</div>
     </div>

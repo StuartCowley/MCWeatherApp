@@ -11,6 +11,7 @@ describe("ForecastDetails", () => {
       min: 12,
       max: 22,
     },
+    onSelect: () => {},
   };
 
   it("renders correctly", () => {
@@ -20,6 +21,7 @@ describe("ForecastDetails", () => {
         description={validProps.description}
         icon={validProps.icon}
         maxTemp={validProps.temperature.max}
+        onSelect={validProps.onSelect}
       />
     );
 
@@ -33,6 +35,7 @@ describe("ForecastDetails", () => {
         description={validProps.description}
         icon={validProps.icon}
         maxTemp={validProps.temperature.max}
+        onSelect={validProps.onSelect}
       />
     );
     expect(getByText("Sunny")).toHaveClass("forecast-summary__description");
