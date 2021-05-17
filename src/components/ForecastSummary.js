@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
 
-const ForecastSummary = ({ date, description, icon, maxTemp }) => {
+const ForecastSummary = ({ date, description, icon, maxTemp, onSelect }) => {
   // Create date in format `shortWeekDay numericDay shortMonth` for local language (hard coded to GB for now)
   const locale = "en-GB";
   const options = {
@@ -29,6 +29,13 @@ const ForecastSummary = ({ date, description, icon, maxTemp }) => {
       />
       <div className="forecast-summary__max-temp">{`${maxTemp}\u2103`}</div>
       <div className="forecast-summary__description">{description}</div>
+      <button
+        type="button"
+        className="forecast-summary__details-button"
+        onClick={() => onSelect(date)}
+      >
+        More details
+      </button>
     </div>
   );
 };
@@ -38,6 +45,7 @@ ForecastSummary.propTypes = {
   description: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   maxTemp: PropTypes.number.isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default ForecastSummary;

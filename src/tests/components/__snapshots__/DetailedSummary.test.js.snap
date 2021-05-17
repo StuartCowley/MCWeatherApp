@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailedSummary renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="detailed-summary"
+    data-testid="detailed-summary"
+  >
+    <div
+      class="detailed-summary__date"
+    >
+      Mon 30 Apr
+    </div>
+    <i
+      class="wi wi-day-sprinkle wi-flip-horizontal wi-rotate-90 detailed-summary__icon"
+      data-testid="forecast-icon"
+      name="owm"
+    />
+    <div
+      class="detailed-summary__max-temp"
+    >
+      15℃
+    </div>
+    <div
+      class="detailed-summary__description"
+    >
+      Cloudy
+    </div>
+    <div
+      class="detailed-summary__humidity"
+    >
+      22
+    </div>
+    <div
+      class="detailed-summary__wind-speed"
+    >
+      13
+    </div>
+    <div
+      class="detailed-summary__wind-direction"
+    >
+      s
+    </div>
+  </div>
+</DocumentFragment>
+`;
