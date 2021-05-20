@@ -10,6 +10,20 @@ exports[`App renders correctly 1`] = `
     >
       Forecast for , 
     </h1>
+    <div>
+      <form>
+        <input
+          placeholder="Enter city"
+          type="text"
+        />
+        <button
+          class="search-form__button"
+          type="submit"
+        >
+          Change location
+        </button>
+      </form>
+    </div>
     <div
       class="forecast-summaries"
     />
