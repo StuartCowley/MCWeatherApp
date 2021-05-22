@@ -23,9 +23,11 @@ const getForecasts = (
       const { status } = error.response;
       if (status === 404) {
         setErrorMessage("Couldn't find that location, try again");
+        setIsLoading(false);
       }
       if (status === 500) {
         setErrorMessage("There is a server error, please try again later");
+        setIsLoading(false);
       }
     });
 };

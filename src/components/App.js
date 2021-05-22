@@ -53,8 +53,11 @@ const App = () => {
 
   return (
     <div className="weather-app">
-      {isLoading && <Loading />}
-      <CSSTransition classNames="loading-transition">
+      <CSSTransition
+        in={isLoading}
+        timeout={200}
+        classNames="loading-transition"
+      >
         <>{isLoading && <Loading />}</>
       </CSSTransition>
       <>
@@ -78,7 +81,6 @@ const App = () => {
             )}
           </>
         )}
-        )
       </>
     </div>
   );
