@@ -1,0 +1,19 @@
+.loading {
+    height: 100px;
+    width: 100px;
+}
+
+.loading__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(236,238,241, 0.8);
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}

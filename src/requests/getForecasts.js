@@ -5,7 +5,8 @@ const getForecasts = (
   setLocation,
   setSelectedDate,
   location,
-  setErrorMessage
+  setErrorMessage,
+  setIsLoading
 ) => {
   const parameter = location ? `?city=${location}` : "";
   const endpoint = `https://mcr-codes-weather.herokuapp.com/forecast${parameter}`;
@@ -16,6 +17,7 @@ const getForecasts = (
       setSelectedDate(response.data.forecasts[0].date);
       setLocation(response.data.location);
       setErrorMessage("");
+      setIsLoading(false);
     })
     .catch((error) => {
       const { status } = error.response;
